@@ -61,6 +61,19 @@ npm run build     # checagem de tipos + build de produção em dist/
 npm run preview   # serve o build de produção
 ```
 
+### Abrir sem servidor
+
+O build gera um `dist/index.html` autônomo: o JavaScript e o CSS ficam embutidos
+no próprio arquivo. Assim, dá para abrir o jogo com duplo clique, sem servidor:
+
+```bash
+npm run build
+xdg-open dist/index.html   # Linux; use "open" no macOS
+```
+
+O `favicon.svg` fica ao lado do HTML e é opcional. A pasta `dist/` também pode
+ser publicada em qualquer hospedagem estática.
+
 ## Testes
 
 A camada `src/core/` é pura, sem React, e concentra as regras testáveis:
